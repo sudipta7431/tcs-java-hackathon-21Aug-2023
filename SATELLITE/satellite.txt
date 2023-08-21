@@ -1,0 +1,98 @@
+Create a class Satellite with below attributes:
+satelliteld - int
+satelliteName - String
+country - String
+boostersCountUsed - int
+purpose- String
+expense - int(in crores)
+The above attributes should be private, write getters, setters and parameterized constructor as required.
+Create class MyClass with main method.
+Implement two static methods - getSatelliteWithHighestExpense and getSatelliteBasedOnGivenCountry in Solution class.
+getSatelliteWithHighestExpense method:
+The method will take an array of Satellite Objects and a String value as input parameters and will return the Satellite with the highest expenses from array of Satellite objects
+for the given purpose (String parameter passed). If no Satellite with the given Satellite purpose is present in the array of Satellite objects, then the method should return null.
+getSatelliteBasedOnGivenCountry method:
+This method will take three input parameters - array of Satellite objects and one int parameter and one String parameter.
+This method will return the Satellite ID from the array of Satellite objects for the given country only if the booster count used is greater than the given booster
+counts. If no Satellite with the above condition is present in the array of Satellite objects, then the method should return 0.
+Note: No two Satellite will have the same satelliteld.
+All the searches should be case insensitive.
+The above mentioned static methods should be called from the main method. For getSatelliteWithHighestExpense method - The main method should print the satelliteld,satellite Name and country from the returned Satellite object if the returned value is not null
+otherwise it should print "No such Satellite". Pleass refer the sample output for more details.
+-
+For getSatelliteBased OnGiven Country method - The main method should print the returned satelliteld as it is if the returned value is not greater than 0. Else it should print "No such type".
+Before calling these static methods in main, use Scanner object to read the values of four Satellite objects referring attributes in the above mentioned
+attribute sequence.
+Next, read the value of one String parameter, one int parameter and one more String parameter for capturing purpose, boosters Count Used and country respectively.
+
+
+Testcase 1: 
+Input:
+1001
+Chandrayan1
+India
+4
+Education
+100
+1002
+Chandrayan2
+India
+5
+Defence
+150
+1003
+Chandrayan3
+India
+4
+Education
+120
+1004
+GSat
+India
+2
+Education
+140
+Education
+4
+India
+
+Output:
+1004
+GSat
+India
+1002
+*/
+
+/*
+
+
+Testcase 2: 1001
+Chandrayan1
+India
+4
+Education
+100
+1002
+Chandrayan2
+India
+5
+Defence
+150
+1003
+Chandrayan3
+India
+4
+Education
+120
+1004
+GSat
+India
+2
+Education
+140
+Moon
+7
+India
+output:
+No such Satellite
+No such type

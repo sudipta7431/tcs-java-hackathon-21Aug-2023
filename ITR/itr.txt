@@ -1,0 +1,90 @@
+Create a class Income TaxFiling with the below attributes:
+
+panNo - int
+name - String
+taxToBePaid - int
+taxPaid - int
+location - String
+
+The above attributes should be private, write getters, setters and parameterized constructor as required.
+Create class MyClass with main method.
+
+Implement two static methods - find Balance TaxToBePaid and findMaxTaxPaid in MyClass class.
+findBalance TaxToBePaid method:
+This method will take two input parameters - array of Income TaxFiling objects and an int parameter.
+The method will return the balance tax amount to be paid for the given PAN No(int parameter passed) from array of Income TaxFiling objects.
+The balance tax can be calculated by using the given formula.
+Balance Tax = Tax to be Paid - Tax Paid
+If no Income TaxFiling with the above condition is present in the array of Income TaxFiling objects, then the method should return 0.
+findMaxTaxPaid method:
+This method will take two input parameters - array of Income TaxFiling object and a String parameter.
+The method will return the maximum tax amount paid from array of Income TaxFiling objects for the given location(String parameter passed).
+If no Income TaxFiling object with the given condition is present in the array of
+Income TaxFiling objects, then the method return 0.
+Note: No two Income TaxFiling object would have the same panNo.
+All the searches should be case sensitive.
+The above mentioned static method should be called from the main method.
+For findBalanceTaxToBePaid method - The main method should print the returned balance as it is, if the returned value is greater than 0, or it
+should print "No such PAN No".
+For findMaxTaxPaid method - The main method should print the returned maximum tax paid as it is, if the returned value is greater than 0, or it
+should print "No such incometax filing".
+Before calling these static methods in main, use Scanner object to read the values of four Income TaxFiling objects referring attributes in the above mentioned attribute sequence.
+Next, read one int value and one String value for capturing pan No and location.
+
+
+
+Testcase1:
+Input:
+1001
+John
+75000
+50000
+Chennai
+1002
+Jack
+100000
+40000
+Bangalore
+1003
+Wick
+20000
+10000
+Chennai
+1004
+Sparrow
+35000
+34000
+Chennai
+1003
+Chennai
+Output:
+10000
+50000
+
+Testcase2: 
+Input: 
+1001
+John 
+75000
+50000
+Chennai
+1002
+Jack
+100000
+40000
+Bangalore
+1003
+Wick
+20000
+10000
+Chennai
+1004
+Sparrow
+35000
+34000
+Chennai
+1007
+Mumbai
+Output:
+"No such PAN No"
+"No such incometax filing"
